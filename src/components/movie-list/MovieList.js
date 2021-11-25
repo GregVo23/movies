@@ -6,17 +6,11 @@ export default class MovieList extends Component {
     render() {
         return (
             <div className="row row-cols-1 row-cols-md-6 g-4">
-                <MovieElement movie={ this.props.movies[0] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[1] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[2] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[3] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[2] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[0] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[1] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[0] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[2] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[3] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
-                <MovieElement movie={ this.props.movies[1] } updateSelectedMovie={ this.props.updateSelectedMovie }/>
+                { this.props.movies.map( (m, index) => (
+                    <MovieElement key={ m.title } movie={ m } updateSelectedMovie={ () => {
+                        this.props.updateSelectedMovie(index) }} />
+
+                ))}
             </div>
         )
     }

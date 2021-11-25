@@ -25,6 +25,30 @@ class App extends Component {
         description: "Un film de romance entre deux personnages issues de classe différente à bord du Titanic."
       },
       {
+        title: "Skyfall1",
+        img: "https://i.pinimg.com/originals/6e/ca/66/6eca66dd1980297c9d0b021f041042e3.jpg",
+        details: "R | 267 min |Romance, HHistoire",
+        description: "Un film de romance entre deux personnages issues de classe différente à bord du Titanic."
+      },
+      {
+        title: "Skyfall2",
+        img: "https://i.pinimg.com/originals/6e/ca/66/6eca66dd1980297c9d0b021f041042e3.jpg",
+        details: "R | 267 min |Romance, HHistoire",
+        description: "Un film de romance entre deux personnages issues de classe différente à bord du Titanic."
+      },
+      {
+        title: "Skyfall3",
+        img: "https://i.pinimg.com/originals/6e/ca/66/6eca66dd1980297c9d0b021f041042e3.jpg",
+        details: "R | 267 min |Romance, HHistoire",
+        description: "Un film de romance entre deux personnages issues de classe différente à bord du Titanic."
+      },
+      {
+        title: "Skyfall4",
+        img: "https://i.pinimg.com/originals/6e/ca/66/6eca66dd1980297c9d0b021f041042e3.jpg",
+        details: "R | 267 min |Romance, HHistoire",
+        description: "Un film de romance entre deux personnages issues de classe différente à bord du Titanic."
+      },
+      {
         title: "Star Wars",
         img: "https://www.tenatthetop.org/wp-content/uploads/2021/05/star-wars-the-rise-of-skywalker-theatrical-poster-1000_ebc74357.jpg",
         details: "R | 267 min |Romance, HHistoire",
@@ -34,10 +58,7 @@ class App extends Component {
     }
   }
 
-  updateSelectedMovie = (title) => {
-    const index = this.state.movies.findIndex((m) => {
-      return title === m.title;
-    })
+  updateSelectedMovie = (index) => {
     this.setState({
       selectedMovie: index
     })
